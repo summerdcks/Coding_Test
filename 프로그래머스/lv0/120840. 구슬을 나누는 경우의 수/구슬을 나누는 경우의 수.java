@@ -1,12 +1,11 @@
 class Solution {
-    public long solution(int balls, int share) {
+    public int solution(int balls, int share) {
         double answer = fac(balls)/(fac(share)*fac(balls-share));
-        return Math.round(answer);
+        return (int)Math.round(answer);
     }
     
-    public double fac(int x) {
-        if (x < 1) return 1;
-        if (x == 1) return 1;
-        return x *fac(x-1);
+    public double fac(int num) {
+        if(num <= 1) return 1;
+        return num*fac(num-1);
     }
 }

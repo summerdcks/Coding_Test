@@ -7,18 +7,25 @@ class Solution {
         for(int i = 0; i < array.length; i++) {
             hm.put(array[i], hm.getOrDefault(array[i], 0) + 1);
         }
-        //최댓값
+        
+        //최빈값
         int max = 0;
         for(Map.Entry<Integer, Integer> entry : hm.entrySet()) {
-            System.out.println("key:" + entry.getKey());
-            System.out.println("value:" + entry.getValue());
+            System.out.println(entry.getKey() + " : " + entry.getValue());
             if(entry.getValue() > max) {
                 max = entry.getValue();
                 answer = entry.getKey();
-            } else if (entry.getValue() == max) {
-                answer = -1;
+            } 
+        }
+        
+        //예외처리
+        int count = 0;
+        for(Map.Entry<Integer, Integer> entry : hm.entrySet()) {
+            if(entry.getValue() == max) {
+                count++;
             }
         }
+        if(count != 1) answer = -1;
         return answer;
     }
 }

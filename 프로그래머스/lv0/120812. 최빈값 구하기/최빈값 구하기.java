@@ -15,17 +15,19 @@ class Solution {
             if(entry.getValue() > max) {
                 max = entry.getValue();
                 answer = entry.getKey();
-            } 
-        }
-        
-        //예외처리
-        int count = 0;
-        for(Map.Entry<Integer, Integer> entry : hm.entrySet()) {
-            if(entry.getValue() == max) {
-                count++;
+            } else if (entry.getValue() == max) {
+                answer = -1;
             }
         }
-        if(count != 1) answer = -1;
+        
+        // //예외처리
+        // int count = 0;
+        // for(Map.Entry<Integer, Integer> entry : hm.entrySet()) {
+        //     if(entry.getValue() == max) {
+        //         count++;
+        //     }
+        // }
+        // if(count != 1) answer = -1;
         return answer;
     }
 }

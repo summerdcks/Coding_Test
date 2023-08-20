@@ -8,6 +8,7 @@ class Solution {
             {2,0}, {2,1}, {2,2},
             {3,0}, {3,1}, {3,2}
         };
+        
         int[] left = arr[9];
         int[] right = arr[11];
         for(int i = 0; i < numbers.length; i++) {

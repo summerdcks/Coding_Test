@@ -5,7 +5,6 @@ class Solution {
         int luy = 50;  //luy 시작점 가로축최소값
         int rdx = 0;  //rdx 끝점 세로축최대값
         int rdy = 0;  //rdy 끝점 가로축최대값
-    
         //luy 가로축최소값
         for(int i = 0 ; i < wallpaper.length; i++) {
             for(int j = 0; j < wallpaper[i].length(); j++) {
